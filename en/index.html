@@ -29,12 +29,15 @@
         }
         .download-button {
             display: inline-block;
-            background-color: #3498db;
+            background-color: #1a7a3c;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 32px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 24px;
             font-weight: bold;
+        }
+        .download-button:hover {
+            background-color: #15602f;
         }
 .video-container {
     position: relative;
@@ -63,12 +66,35 @@
             color: #3498db;
             text-decoration: none;
         }
+        .dl-hero-header { background:#ffffff; border-bottom:1px solid #dce2e8; }
+        .dl-hero { width:min(940px, calc(100% - 40px)); margin:0 auto; display:grid;
+            grid-template-columns:128px minmax(0,1fr); gap:28px; align-items:center; padding:56px 0;
+            font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif; }
+        .dl-hero-icon { display:block; width:128px; height:128px; border-radius:24px; }
+        .dl-hero-title { margin:0 0 8px; font-size:2.6rem; line-height:1.15; letter-spacing:0; color:#1f2933; }
+        .dl-hero-sub { margin:0; color:#536170; font-size:1.2rem; font-weight:600; }
+        .dl-hero .download-btn { display:inline-block; margin-top:16px; background:#1a7a3c; color:#fff;
+            text-decoration:none; padding:12px 32px; border-radius:24px; font-size:1rem; font-weight:bold; }
+        .dl-hero .download-btn:hover { background:#15602f; }
+        @media (max-width:640px){
+            .dl-hero { grid-template-columns:84px minmax(0,1fr); gap:18px; padding:38px 0; }
+            .dl-hero-icon { width:84px; height:84px; border-radius:18px; }
+            .dl-hero-title { font-size:clamp(1.7rem,9vw,2.2rem); overflow-wrap:anywhere; }
+            .dl-hero-sub { font-size:1rem; }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Rolled Paper Calculator</h1>
-    </header>
+    <header class="dl-hero-header">
+    <div class="dl-hero">
+        <img class="dl-hero-icon" src="../AppIcon.png" alt="Rolled Paper Calculator app icon" width="128" height="128">
+        <div>
+            <h1 class="dl-hero-title">Rolled Paper Calculator</h1>
+            <p class="dl-hero-sub">A simple calculator that keeps your history like a paper roll</p>
+            <a class="download-btn" href="https://apps.apple.com/app/id390235996">Download on the App Store</a>
+        </div>
+    </div>
+</header>
     
     <main>
         <section>

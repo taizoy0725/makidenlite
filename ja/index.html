@@ -49,17 +49,17 @@
         }
         .download-button {
             display: inline-block;
-            background-color: #0070c9;
+            background-color: #1a7a3c;
             color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 32px;
+            border-radius: 24px;
             text-decoration: none;
             font-weight: bold;
             margin-top: 20px;
             transition: background-color 0.3s;
         }
         .download-button:hover {
-            background-color: #005999;
+            background-color: #15602f;
         }
         .download-section {
             text-align: center;
@@ -82,12 +82,35 @@
     width: 100%;
     height: 100%;
 }
+        .dl-hero-header { background:#ffffff; border-bottom:1px solid #dce2e8; }
+        .dl-hero { width:min(940px, calc(100% - 40px)); margin:0 auto; display:grid;
+            grid-template-columns:128px minmax(0,1fr); gap:28px; align-items:center; padding:56px 0;
+            font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif; }
+        .dl-hero-icon { display:block; width:128px; height:128px; border-radius:24px; }
+        .dl-hero-title { margin:0 0 8px; font-size:2.6rem; line-height:1.15; letter-spacing:0; color:#1f2933; }
+        .dl-hero-sub { margin:0; color:#536170; font-size:1.2rem; font-weight:600; }
+        .dl-hero .download-btn { display:inline-block; margin-top:16px; background:#1a7a3c; color:#fff;
+            text-decoration:none; padding:12px 32px; border-radius:24px; font-size:1rem; font-weight:bold; }
+        .dl-hero .download-btn:hover { background:#15602f; }
+        @media (max-width:640px){
+            .dl-hero { grid-template-columns:84px minmax(0,1fr); gap:18px; padding:38px 0; }
+            .dl-hero-icon { width:84px; height:84px; border-radius:18px; }
+            .dl-hero-title { font-size:clamp(1.7rem,9vw,2.2rem); overflow-wrap:anywhere; }
+            .dl-hero-sub { font-size:1rem; }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>巻き紙電卓</h1>
-    </header>
+    <header class="dl-hero-header">
+    <div class="dl-hero">
+        <img class="dl-hero-icon" src="../AppIcon.png" alt="巻き紙電卓 アプリアイコン" width="128" height="128">
+        <div>
+            <h1 class="dl-hero-title">巻き紙電卓</h1>
+            <p class="dl-hero-sub">計算履歴を巻き紙のように残せる、シンプルな計算機アプリ</p>
+            <a class="download-btn" href="https://apps.apple.com/app/id390235996">App Storeからダウンロード</a>
+        </div>
+    </div>
+</header>
     
     <main>
 <section>
@@ -230,7 +253,7 @@
 
         <section class="download-section">
             <p>App Storeからダウンロードして、新しい計算体験を始めましょう！</p>
-            <a href="https://apps.apple.com/app/id390235996" class="download-button">AppStoreでダウンロード</a>
+            <a href="https://apps.apple.com/app/id390235996" class="download-button">App Storeからダウンロード</a>
         </section>
     </main>
 
